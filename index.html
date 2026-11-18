@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Prévente · Roméo Mivekannin · Galerie Cécile Fakhoury</title>
+<meta name="description" content="Liste privée de prévente. Démonstration, prix fictifs.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=League+Spartan:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F4F2EE;--panel:#E8E4DD;--ink:#161616;--mute:#77736C;--line:#CFCAC1;--serif:'Cormorant Garamond',Georgia,serif;--sans:'League Spartan',system-ui,sans-serif;--pad:clamp(18px,5vw,64px);
+--disponible:#2E6B45;--prevente:#161616;--reserve:#A8741A;--vendu:#9E3B32}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;font-size:18px;line-height:1.5}
+img{display:block;max-width:100%;height:auto}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;background:none;border:0}
+.demo{background:#161616;color:#F4F2EE;font-family:var(--sans);font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:9px var(--pad)}
+.bar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:20px;padding:14px var(--pad);background:rgba(244,242,238,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar img{height:34px;width:auto}
+.bar .priv{margin-left:auto;font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
+.lang{display:flex;gap:4px;font-family:var(--sans);font-size:13px;color:var(--mute)}
+.lang button{padding:8px 5px;min-width:30px;min-height:36px}
+.lang button[aria-pressed=true]{color:var(--ink);font-weight:700;text-decoration:underline;text-underline-offset:5px}
+.kick{font-family:var(--sans);font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--mute)}
+.hero{display:grid;grid-template-columns:5fr 7fr;gap:clamp(24px,5vw,72px);align-items:end;padding:clamp(36px,7vh,80px) var(--pad) clamp(32px,6vh,64px)}
+.hero h1{font-family:var(--sans);font-weight:700;font-size:clamp(40px,5.6vw,76px);line-height:1;margin:18px 0 10px}
+.hero .expo{font-style:italic;font-size:clamp(26px,2.6vw,36px)}
+.hero .dates{font-family:var(--sans);font-size:14px;color:var(--mute);margin-top:12px}
+.hero p.lead{margin-top:22px;max-width:520px;font-size:19px}
+.ex{display:inline-block;margin-top:22px;border:1px solid var(--ink);font-family:var(--sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;padding:9px 14px}
+.hero-img{background:#000}
+.cap{font-size:14px;color:var(--mute);font-style:italic;padding-top:10px;text-align:right}
+.tools{position:sticky;top:63px;z-index:15;display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:14px var(--pad);background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.f{font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border:1px solid var(--line);padding:10px 14px;min-height:40px;border-radius:999px;background:#fff}
+.f[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.f .n{opacity:.6;margin-left:6px}
+.tools .count{margin-left:auto;font-family:var(--sans);font-size:13px;color:var(--mute)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(36px,5vw,64px) clamp(20px,3vw,40px);padding:clamp(32px,6vh,64px) var(--pad)}
+.card{display:flex;flex-direction:column;scroll-margin-top:140px}
+.card[hidden]{display:none}
+.card.focus{outline:2px solid var(--ink);outline-offset:10px}
+.card .im{background:var(--panel);height:clamp(300px,27vw,400px);display:flex;align-items:center;justify-content:center;padding:18px}
+.card .im img{max-height:100%;max-width:100%;width:auto;height:auto;object-fit:contain;box-shadow:0 8px 22px rgba(0,0,0,.14)}
+.row{display:flex;justify-content:space-between;align-items:center;margin-top:14px}
+.ref{font-family:var(--sans);font-weight:700;font-size:13px;color:var(--mute)}
+.st{font-family:var(--sans);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#fff;border-radius:999px;padding:5px 11px}
+.st.disponible{background:var(--disponible)}.st.prevente{background:var(--prevente)}.st.reserve{background:var(--reserve)}.st.vendu{background:var(--vendu)}
+.art{font-family:var(--sans);font-weight:600;font-size:14px;margin-top:8px}
+.ti{font-size:21px;line-height:1.2;margin-top:2px}
+.ti em{font-style:italic}
+.md{font-size:15px;color:var(--mute);margin-top:6px}
+.pr{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.pr .l{font-family:var(--sans);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);font-weight:600}
+.pr .v{font-family:var(--sans);font-weight:700;font-size:22px;line-height:1.1;margin-top:3px}
+.pr .x{font-size:14px;color:var(--mute)}
+.pr .sold{font-family:var(--sans);font-weight:700;color:var(--vendu);font-size:18px}
+.btn{font-family:var(--sans);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;background:var(--ink);color:#fff;padding:13px 16px;min-height:44px;white-space:nowrap}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.btn:hover{background:#333}.btn.ghost:hover{background:#fff}
+.how{padding:clamp(48px,8vh,90px) var(--pad);border-top:1px solid var(--line)}
+.how h2,.contact h2{font-family:var(--sans);font-weight:700;font-size:clamp(30px,3.6vw,46px);line-height:1.05;margin:10px 0 34px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 28px}
+.step{border-top:2px solid var(--ink);padding-top:14px}
+.step b{display:block;font-family:var(--sans);font-size:30px}
+.step h3{font-family:var(--sans);font-size:17px;margin:4px 0 6px}
+.note{margin-top:26px;color:var(--mute);font-style:italic}
+.contact{background:#141414;color:#fff;padding:clamp(48px,8vh,90px) var(--pad)}
+.contact .kick{color:#B9B4AA}
+.cg{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.cg p{color:#D9D4CA;font-size:17px}
+.cg strong{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:#B9B4AA;margin-bottom:6px}
+.foot{padding:22px var(--pad);font-family:var(--sans);font-size:12px;color:var(--mute);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+dialog{border:0;padding:0;max-width:560px;width:calc(100% - 28px);background:var(--paper);color:var(--ink);margin:auto}
+dialog::backdrop{background:rgba(20,20,20,.6)}
+.dlg{padding:28px}
+.dlg h3{font-family:var(--sans);font-size:24px;margin:6px 0 4px}
+.dlg .wk{font-style:italic;color:var(--mute);margin-bottom:16px}
+.dlg label{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--mute);margin:12px 0 5px}
+.dlg input,.dlg select,.dlg textarea{width:100%;border:1px solid var(--line);background:#fff;padding:11px 12px;font-size:17px;font-family:var(--serif)}
+.dlg .acts{display:flex;gap:10px;justify-content:flex-end;margin-top:20px}
+.dlg .warn{margin-top:14px;font-size:14px;color:var(--mute);font-style:italic}
+.ok{display:none}.sent .ok{display:block}.sent form{display:none}
+@media (max-width:960px){.grid{grid-template-columns:repeat(2,1fr)}.steps,.cg{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){body{font-size:17px}.card .im{height:min(90vw,440px)}.hero{grid-template-columns:1fr}.hero-img{order:-1}.grid{grid-template-columns:1fr}.steps,.cg{grid-template-columns:1fr}
+ .bar .priv{display:none}.lang{margin-left:auto}.tools{position:static}.card{scroll-margin-top:80px}.tools .count{width:100%;margin-left:0}.f{padding:9px 11px;font-size:11px}.pr{flex-wrap:wrap}.pr .btn{width:100%}}
+</style>
+</head>
+<body>
+<div class="demo" data-k="demo">Démonstration · page non publique · prix fictifs, donnés à titre d’exemple · aucune demande n’est envoyée</div>
+<header class="bar">
+  <img src="img/logo.png" alt="Galerie Cécile Fakhoury" width="300" height="99">
+  <span class="priv" data-k="priv">Liste privée · collectionneurs</span>
+  <div class="lang" role="group" aria-label="Langue"><button type="button" data-lang="fr" aria-pressed="true">FR</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
+</header>
+<main>
+<section class="hero">
+  <div>
+    <p class="kick" data-k="kick">Prévente · avant le vernissage</p>
+    <h1>Roméo Mivekannin</h1>
+    <p class="expo"><em>Dieu n’est pas obligé</em></p>
+    <p class="dates" data-k="dates">5 novembre 2026 – 9 janvier 2027 · Abidjan, Cocody</p>
+    <p class="lead" data-k="lead">Cette liste est adressée à quelques collectionneurs avant l’ouverture au public. Chaque œuvre peut être mise en option à votre nom pendant 72 heures.</p>
+    <span class="ex" data-k="ex">Prix donnés à titre d’exemple</span>
+  </div>
+  <div><div class="hero-img"><img src="img/o06.jpg" alt="Roméo Mivekannin, Le sacre du printemps, d’après Germaine Acogny (2020), 2026" width="1100" height="635"></div>
+  <p class="cap"><em>Le sacre du printemps, d’après Germaine Acogny (2020)</em>, 2026 · 281 x 495 cm</p></div>
+</section>
+<div class="tools" id="liste">
+  <div class="filters" role="group" aria-label="Filtrer">
+    <button class="f" data-f="all" aria-pressed="true"><span data-k="f_all">Toutes</span><span class="n"></span></button>
+    <button class="f" data-f="disponible" aria-pressed="false"><span data-k="f_disponible">Disponibles</span><span class="n"></span></button>
+    <button class="f" data-f="prevente" aria-pressed="false"><span data-k="f_prevente">En prévente</span><span class="n"></span></button>
+    <button class="f" data-f="reserve" aria-pressed="false"><span data-k="f_reserve">Réservées</span><span class="n"></span></button>
+    <button class="f" data-f="vendu" aria-pressed="false"><span data-k="f_vendu">Vendues</span><span class="n"></span></button>
+  </div>
+  <span class="count" id="count"></span>
+</div>
+<section class="grid" id="grid"></section>
+<section class="how" id="acquerir">
+  <p class="kick" data-k="how_k">Mode d’emploi</p>
+  <h2 data-k="how_t">Comment acquérir une œuvre</h2>
+  <div class="steps" id="steps"></div>
+  <p class="note" data-k="how_n">Les délais et conditions ci-dessus sont donnés à titre d’exemple.</p>
+</section>
+<section class="contact">
+  <p class="kick" data-k="c_k">Contact</p>
+  <h2 data-k="c_t">Une question sur une œuvre ?</h2>
+  <div class="cg">
+    <p><strong data-k="c_dem">DEMANDES</strong>Francis Corabœuf<br><span data-k="c_dir">Directeur, Paris</span><br>francis@cecilefakhoury.com</p>
+    <p><strong>ABIDJAN</strong><span data-k="c_adr">Cocody, boulevard Latrille, entre la Sodemi et l’immeuble Carbone</span><br>+225 27 22 44 66 77</p>
+    <p><strong>PARIS</strong><span data-k="c_show">Showroom, sur rendez-vous uniquement</span><br>+33 (0)7 62 06 36 20</p>
+  </div>
+</section>
+</main>
+<footer class="foot"><span data-k="court">Courtesy de l’artiste et de la Galerie Cécile Fakhoury · images : cecilefakhoury.com</span><span data-k="demo2">Page de démonstration, non indexée. Prix fictifs.</span></footer>
+<dialog id="dlg"><div class="dlg">
+  <form id="frm" method="dialog">
+    <p class="kick" data-k="d_k">Demande · option de 72 heures</p>
+    <h3 id="d_t"></h3><p class="wk" id="d_w"></p>
+    <label for="nm" data-k="d_nm">Nom</label><input id="nm" required autocomplete="off">
+    <label for="em" data-k="d_em">E-mail</label><input id="em" type="email" required autocomplete="off">
+    <label for="ty" data-k="d_ty">Votre demande</label>
+    <select id="ty"><option data-k="o1">Réserver 72 heures</option><option data-k="o2">Recevoir le dossier de l’œuvre</option><option data-k="o3">Visite privée à la galerie</option><option data-k="o4">Être sur la liste d’attente</option></select>
+    <label for="ms" data-k="d_ms">Message (facultatif)</label><textarea id="ms" rows="3"></textarea>
+    <p class="warn" data-k="d_warn">Démonstration : rien n’est envoyé, aucune donnée n’est enregistrée.</p>
+    <div class="acts"><button type="button" class="btn ghost" id="cl" data-k="d_cl">Fermer</button><button type="submit" class="btn" data-k="d_ok">Envoyer la demande</button></div>
+  </form>
+  <div class="ok"><p class="kick" data-k="s_k">Demande simulée</p><h3 data-k="s_t">Merci, c’est noté.</h3>
+    <p data-k="s_p">Dans la version réelle, la galerie reçoit votre demande et l’œuvre passe en option à votre nom pour 72 heures. Ici, rien n’a été envoyé.</p>
+    <div class="acts"><button type="button" class="btn" id="cl2" data-k="d_cl">Fermer</button></div></div>
+</div></dialog>
+<script>
+const W = [{"ref": "01", "id": "o06", "t": "Le sacre du printemps, d’après Germaine Acogny (2020)", "y": "2026", "mfr": "Acrylique sur velours libre noir", "men": "Acrylic on free black velvet", "cm": "281 x 495 cm", "inch": "110 5/8 x 194 7/8 in", "st": "prevente", "eur": 45000, "xof": 29518000, "w": 1500, "h": 866}, {"ref": "02", "id": "o02", "t": "Agnus Dei, d’après Francisco de Zurbaran (1635-1640)", "y": "2026", "mfr": "Acrylique sur velours libre noir", "men": "Acrylic on free black velvet", "cm": "140 x 188 cm", "inch": "55 1/8 x 74 in", "st": "reserve", "eur": 19500, "xof": 12791000, "w": 1500, "h": 1047}, {"ref": "03", "id": "o01", "t": "Cérémonie du pacte d’amitié (ou pacte du sang), d’après Frédéric Gadmer (1930)", "y": "2026", "mfr": "Acrylique sur velours libre noir", "men": "Acrylic on free black velvet", "cm": "140 x 189 cm", "inch": "55 1/8 x 74 3/8 in", "st": "disponible", "eur": 19500, "xof": 12791000, "w": 1500, "h": 1082}, {"ref": "04", "id": "o05", "t": "Sob os olhos da Igreja (Sous les yeux de l’Eglise), d’après Giacomo Mancini (2020)", "y": "2026", "mfr": "Acrylique sur velours libre noir", "men": "Acrylic on free black velvet", "cm": "203 x 140 cm", "inch": "79 7/8 x 55 1/8 in", "st": "disponible", "eur": 20000, "xof": 13119000, "w": 1003, "h": 1500}, {"ref": "05", "id": "o04", "t": "Iniciação-Iganhin (Initiation à Infangni), d’après Pierre Fatumbi Verger (1958)", "y": "2026", "mfr": "Acrylique sur velours libre noir", "men": "Acrylic on free black velvet", "cm": "191 x 140 cm", "inch": "75 1/4 x 55 1/8 in", "st": "prevente", "eur": 19500, "xof": 12791000, "w": 1121, "h": 1500}, {"ref": "06", "id": "o09", "t": "Novo Samba, d’après Pedro Miceli (2026)", "y": "2026", "mfr": "Acrylique sur velours libre noir", "men": "Acrylic on free black velvet", "cm": "252 x 140 cm", "inch": "99 1/4 x 55 1/8 in", "st": "disponible", "eur": 22500, "xof": 14759000, "w": 925, "h": 1500}, {"ref": "07", "id": "o03", "t": "Guardia do Samba de Roda, d’après Rapha Dutra (2026)", "y": "2026", "mfr": "Acrylique sur velours libre noir", "men": "Acrylic on free black velvet", "cm": "223 x 140 cm", "inch": "87 3/4 x 55 1/8 in", "st": "vendu", "eur": 21000, "xof": 13775000, "w": 1019, "h": 1500}, {"ref": "08", "id": "o07", "t": "Condomble priestess, d’après Chester Higgins", "y": "2026", "mfr": "Acrylique sur velours libre noir", "men": "Acrylic on free black velvet", "cm": "259 x 140 cm", "inch": "102 x 55 1/8 in", "st": "disponible", "eur": 23000, "xof": 15087000, "w": 969, "h": 1500}, {"ref": "09", "id": "o08", "t": "Bolero, d’après Wesley Ruzibiza (2022)", "y": "2026", "mfr": "Acrylique sur velours libre noir", "men": "Acrylic on free black velvet", "cm": "140 x 317 cm", "inch": "55 1/8 x 124 3/4 in", "st": "prevente", "eur": 25500, "xof": 16727000, "w": 1500, "h": 718}, {"ref": "10", "id": "o12", "t": "Les fous d’Abidjan, d’après Dorris Haron Kasco (1994)", "y": "2026", "mfr": "Acrylique sur velours libre noir", "men": "Acrylic on free black velvet", "cm": "236 x 140 cm", "inch": "92 7/8 x 55 1/8 in", "st": "reserve", "eur": 22000, "xof": 14431000, "w": 958, "h": 1500}, {"ref": "11", "id": "o13", "t": "Au nom du Christ, d’après Roger Gnoan Mbala (1993)", "y": "2026", "mfr": "Acrylique sur velours libre noir", "men": "Acrylic on free black velvet", "cm": "140 x 253 cm", "inch": "55 1/8 x 99 5/8 in", "st": "disponible", "eur": 22500, "xof": 14759000, "w": 1500, "h": 881}, {"ref": "12", "id": "o10", "t": "Le sacre du printemps, d’après Germaine Acogny (2020)", "y": "2026", "mfr": "Acrylique sur velours libre noir", "men": "Acrylic on free black velvet", "cm": "210 x 140 cm", "inch": "82 5/8 x 55 1/8 in", "st": "vendu", "eur": 20500, "xof": 13447000, "w": 973, "h": 1500}, {"ref": "13", "id": "o11", "t": "Le sacre du printemps, d’après Germaine Acogny (2020)", "y": "2026", "mfr": "Acrylique sur velours libre noir", "men": "Acrylic on free black velvet", "cm": "236 x 140 cm", "inch": "92 7/8 x 55 1/8 in", "st": "reserve", "eur": 22000, "xof": 14431000, "w": 1016, "h": 1500}, {"ref": "14", "id": "o14", "t": "Le sacre du printemps, d’après Germaine Acogny (2020)", "y": "2026", "mfr": "Acrylique sur velours libre noir", "men": "Acrylic on free black velvet", "cm": "209 x 140 cm", "inch": "82 1/4 x 55 1/8 in", "st": "disponible", "eur": 20500, "xof": 13447000, "w": 1003, "h": 1500}];
+const T = {fr:{demo:"Démonstration · page non publique · prix fictifs, donnés à titre d’exemple · aucune demande n’est envoyée",priv:"Liste privée · collectionneurs",kick:"Prévente · avant le vernissage",
+dates:"5 novembre 2026 – 9 janvier 2027 · Abidjan, Cocody",lead:"Cette liste est adressée à quelques collectionneurs avant l’ouverture au public. Chaque œuvre peut être mise en option à votre nom pendant 72 heures.",
+ex:"Prix donnés à titre d’exemple",f_all:"Toutes",f_disponible:"Disponibles",f_prevente:"En prévente",f_reserve:"Réservées",f_vendu:"Vendues",
+st:{disponible:"Disponible",prevente:"En prévente",reserve:"Réservé",vendu:"Vendu"},count:n=>n+(n>1?" œuvres":" œuvre"),pl:"Prix (exemple)",
+b:"Réserver / demander",bw:"Liste d’attente",sold:"Vendu",how_k:"Mode d’emploi",how_t:"Comment acquérir une œuvre",how_n:"Les délais et conditions ci-dessus sont donnés à titre d’exemple.",
+steps:[["Demande","Vous choisissez une œuvre avec le bouton « Réserver / demander ». Nous vous envoyons son dossier complet."],["Réservation de 72 heures","L’œuvre est mise en option à votre nom pendant 72 heures, le temps de décider. Elle n’est proposée à personne d’autre."],["Facture","À votre accord, la galerie émet une facture pro forma : prix, frais de transport et d’assurance, conditions."],["Paiement","Par virement bancaire, à réception de la facture. L’option est levée si le paiement n’arrive pas dans le délai convenu."],["Transport","L’œuvre, peinte sur velours libre, voyage roulée et protégée. Livraison ou retrait à Abidjan, Dakar ou Paris, assurée de clou à clou."],["Certificat","Vous recevez le certificat d’authenticité signé, avec la fiche de l’œuvre et les conseils d’accrochage et de conservation."]],
+c_k:"Contact",c_t:"Une question sur une œuvre ?",c_dem:"DEMANDES",c_dir:"Directeur, Paris",c_adr:"Cocody, boulevard Latrille, entre la Sodemi et l’immeuble Carbone",c_show:"Showroom, sur rendez-vous uniquement",
+court:"Courtesy de l’artiste et de la Galerie Cécile Fakhoury · images : cecilefakhoury.com",demo2:"Page de démonstration, non indexée. Prix fictifs.",
+d_k:"Demande · option de 72 heures",d_nm:"Nom",d_em:"E-mail",d_ty:"Votre demande",d_ms:"Message (facultatif)",o1:"Réserver 72 heures",o2:"Recevoir le dossier de l’œuvre",o3:"Visite privée à la galerie",o4:"Être sur la liste d’attente",
+d_warn:"Démonstration : rien n’est envoyé, aucune donnée n’est enregistrée.",d_cl:"Fermer",d_ok:"Envoyer la demande",s_k:"Demande simulée",s_t:"Merci, c’est noté.",
+s_p:"Dans la version réelle, la galerie reçoit votre demande et l’œuvre passe en option à votre nom pour 72 heures. Ici, rien n’a été envoyé."},
+en:{demo:"Demonstration · non-public page · fictitious prices, shown as examples · no enquiry is sent",priv:"Private list · collectors",kick:"Pre-sale · ahead of the opening",
+dates:"5 November 2026 – 9 January 2027 · Abidjan, Cocody",lead:"This list is sent to a few collectors before the exhibition opens to the public. Each work can be held in your name for 72 hours.",
+ex:"Prices shown as examples",f_all:"All",f_disponible:"Available",f_prevente:"Pre-sale",f_reserve:"Reserved",f_vendu:"Sold",
+st:{disponible:"Available",prevente:"Pre-sale",reserve:"Reserved",vendu:"Sold"},count:n=>n+(n>1?" works":" work"),pl:"Price (example)",
+b:"Reserve / enquire",bw:"Waiting list",sold:"Sold",how_k:"How it works",how_t:"How to acquire a work",how_n:"The timings and terms above are given as examples.",
+steps:[["Enquiry","Choose a work with the “Reserve / enquire” button. We send you its full file."],["72-hour hold","The work is held in your name for 72 hours while you decide. It is offered to no one else."],["Invoice","Once you agree, the gallery issues a pro forma invoice: price, shipping and insurance, terms."],["Payment","By bank transfer, on receipt of the invoice. The hold lapses if payment is not received within the agreed time."],["Shipping","Painted on free velvet, the work travels rolled and protected. Delivery or collection in Abidjan, Dakar or Paris, insured nail to nail."],["Certificate","You receive the signed certificate of authenticity, with the work’s record and hanging and care advice."]],
+c_k:"Contact",c_t:"A question about a work?",c_dem:"ENQUIRIES",c_dir:"Director, Paris",c_adr:"Cocody, boulevard Latrille, between Sodemi and the Carbone building",c_show:"Showroom, by appointment only",
+court:"Courtesy of the artist and Galerie Cécile Fakhoury · images: cecilefakhoury.com",demo2:"Demonstration page, not indexed. Fictitious prices.",
+d_k:"Enquiry · 72-hour hold",d_nm:"Name",d_em:"Email",d_ty:"Your request",d_ms:"Message (optional)",o1:"Hold for 72 hours",o2:"Receive the work’s file",o3:"Private viewing at the gallery",o4:"Join the waiting list",
+d_warn:"Demonstration: nothing is sent, no data is stored.",d_cl:"Close",d_ok:"Send enquiry",s_k:"Simulated enquiry",s_t:"Thank you, noted.",
+s_p:"In the real version, the gallery receives your enquiry and the work is held in your name for 72 hours. Here, nothing has been sent."}};
+const q = new URLSearchParams(location.search);
+let L = q.get('lang') === 'en' ? 'en' : 'fr', F = 'all';
+const nf = (n, l) => l === 'fr' ? n.toLocaleString('fr-FR').replace(/\s/g, '\u00a0') : n.toLocaleString('en-GB');
+function card(w){const t=T[L], s=w.st!=='vendu';
+ return `<article class="card" id="oeuvre-${w.ref}" data-st="${w.st}"><div class="im"><img loading="lazy" width="${w.w}" height="${w.h}" src="img/${w.id}.jpg" alt="Roméo Mivekannin, ${w.t}, ${w.y}"></div>
+ <div class="row"><span class="ref">${w.ref}</span><span class="st ${w.st}">${t.st[w.st]}</span></div>
+ <p class="art">Roméo Mivekannin</p><p class="ti"><em>${w.t}</em>, ${w.y}</p>
+ <p class="md">${L==='fr'?w.mfr[0].toUpperCase()+w.mfr.slice(1):w.men[0].toUpperCase()+w.men.slice(1)} · ${w.cm}${L==='en'&&w.inch?' · '+w.inch:''}</p>
+ <div class="pr">${s?`<div><p class="l">${t.pl}</p><p class="v">${L==='fr'?nf(w.eur,'fr')+' €':'€'+nf(w.eur,'en')}</p><p class="x">${nf(w.xof,L)} ${L==='fr'?'F CFA':'CFA F'}</p></div>`:`<p class="sold">${t.sold}</p>`}
+ <button class="btn${s?'':' ghost'}" data-ref="${w.ref}">${s?t.b:t.bw}</button></div></article>`}
+function render(){const t=T[L]; document.documentElement.lang=L;
+ document.querySelectorAll('[data-k]').forEach(e=>{const v=t[e.dataset.k]; if(typeof v==='string') e.textContent=v});
+ document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lang===L));
+ document.getElementById('grid').innerHTML=W.map(card).join('');
+ document.getElementById('steps').innerHTML=t.steps.map((s,i)=>`<div class="step"><b>${String(i+1).padStart(2,'0')}</b><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join('');
+ document.querySelectorAll('.f').forEach(b=>{const k=b.dataset.f;b.querySelector('.n').textContent=k==='all'?W.length:W.filter(w=>w.st===k).length});
+ filt(); bind()}
+function filt(){let n=0; document.querySelectorAll('.card').forEach(c=>{const v=F==='all'||c.dataset.st===F; c.hidden=!v; if(v)n++});
+ document.querySelectorAll('.f').forEach(b=>b.setAttribute('aria-pressed',b.dataset.f===F)); document.getElementById('count').textContent=T[L].count(n)}
+const dlg=document.getElementById('dlg');
+function bind(){document.querySelectorAll('.card .btn').forEach(b=>b.onclick=()=>openD(b.dataset.ref))}
+function openD(ref){const w=W.find(x=>x.ref===ref); dlg.classList.remove('sent'); document.getElementById('frm').reset();
+ document.getElementById('d_t').textContent='Roméo Mivekannin · '+ref; document.getElementById('d_w').textContent=w.t+', '+w.y;
+ document.getElementById('ty').selectedIndex = w.st==='vendu'||w.st==='reserve' ? 3 : 0; dlg.showModal()}
+document.getElementById('frm').addEventListener('submit',e=>{e.preventDefault(); dlg.classList.add('sent')});
+document.getElementById('cl').onclick=document.getElementById('cl2').onclick=()=>dlg.close();
+document.querySelectorAll('.f').forEach(b=>b.onclick=()=>{F=b.dataset.f; filt()});
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>{L=b.dataset.lang; render()});
+if(q.get('filtre')) F=q.get('filtre');
+render();
+const o=q.get('oeuvre'); if(o){const c=document.getElementById('oeuvre-'+o); if(c){c.classList.add('focus'); const go=()=>c.scrollIntoView({block:'start'}); setTimeout(go,300); document.fonts.ready.then(()=>setTimeout(go,100)); addEventListener('load',()=>setTimeout(go,50)); if(q.get('form')!=='0') setTimeout(()=>openD(o),700)}}
+</script>
+</body>
+</html>
